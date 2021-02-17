@@ -17,7 +17,9 @@ interface Request {
 @injectable()
 class CreateUserService {
 
-constructor( @inject('UsersRepository') private usersRepository:  IUsersRepository){}
+constructor(
+    @inject('UsersRepository')
+    private usersRepository:  IUsersRepository){}
 
   public async execute({name, email, password}: Request): Promise<User>{
 
